@@ -12,7 +12,7 @@ class PagesController < ApplicationController
   def home
   end
   def images
-
+    @images = Image.all
   end
 
 end
