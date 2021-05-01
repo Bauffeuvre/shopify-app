@@ -1,0 +1,13 @@
+<%= form_for(@image) do |f| %>
+  <%= f.label :name, "Title of the image" %>
+  <%= f.text_field :name %>
+  <%= f.label :rating, "How many stars" %>
+  <%= f.number_field :rating %>
+  <%= f.label :category, "Category of the image" %>
+  <%= f.text_field :category %>
+  <%= f.label :legend, "What legend ?" %>
+  <%= f.text_field :legend %>
+  <%= f.label :img_link, "which url?" %>
+  <%= f.text_field :img_link %>
+    <%= f.submit %>
+<% end %>
