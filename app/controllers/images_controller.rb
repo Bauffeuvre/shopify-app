@@ -1,6 +1,7 @@
 class ImagesController < ApplicationController
+  # Controller for the routes
   def index
-   @images = Image.all
+   @images = Image.alls
   end
   
   def show
@@ -39,6 +40,7 @@ end
 
 private
 
+# Strong parameters
 def image_params
   params.require(:image).permit(:name, :rating, :category, :legend, :img_link)
   
