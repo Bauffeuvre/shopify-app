@@ -5,7 +5,10 @@
 
 require("@rails/ujs").start()
 require("turbolinks").start()
+<<<<<<< HEAD
 require("@rails/activestorage").start()
+=======
+>>>>>>> b5c6566438179161fc249da7caacb6f67b5f4729
 require("channels")
 
 
