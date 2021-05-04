@@ -1,0 +1,12 @@
+<%= simple_form_for(@image) do |f| %>
+  <%= f.label :title, "Title of the image" %>
+  <%= f.text_field :title %>
+  <%= f.label :rating, "How many stars" %>
+  <%= f.number_field :rating %>
+  <%= f.label :legend, "What legend ?" %>
+  <%= f.text_field :legend %>
+  <%= f.label :path, "which url?" %>
+  <%= f.text_field :path %>
+  <%= f.input :photo, as: :file %>
+  <%= f.submit %>
+<% end %>

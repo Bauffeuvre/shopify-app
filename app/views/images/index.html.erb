@@ -1,0 +1,18 @@
+<h1>Images</h1>
+
+<%= link_to "Add an image" , new_image_path %>
+
+<% @images.each do |image| %>
+  <ul>
+    <li> <%= image.id %> </li>
+    <% unless image.path == ""  %>
+    <img src=" <%= image.path %>" alt="test" width="400px">
+    <% else %>
+    <%= cl_image_tag @image.photo.key, height: 300, width: 400, crop: :fill %>
+    <% end %>
+    <p><%= link_to "Link to this image", image_path(image)  %></p>
+    <p><%= link_to "Edit this image", edit_image_path(image)  %></p>
+    <p><%= link_to "Delete this image", image_path(image), method: :delete  %></p>
+
+  </ul>
+<% end %>
