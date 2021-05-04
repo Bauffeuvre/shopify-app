@@ -10,7 +10,6 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 2021_05_03_232224) do
 
   # These are extensions that must be enabled in order to support this database
@@ -47,18 +46,4 @@ ActiveRecord::Schema.define(version: 2021_05_03_232224) do
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
-=======
-ActiveRecord::Schema.define(version: 2021_04_28_230844) do
-
-  create_table "images", force: :cascade do |t|
-    t.string "name"
-    t.integer "rating"
-    t.string "category"
-    t.string "legend"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.string "img_link"
-  end
-
->>>>>>> b5c6566438179161fc249da7caacb6f67b5f4729
 end

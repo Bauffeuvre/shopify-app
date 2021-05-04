@@ -1,5 +1,4 @@
 {
-<<<<<<< HEAD
   "name": "image_repository",
   "private": true,
   "dependencies": {
@@ -10,15 +9,6 @@
     "bootstrap": "^4.6.0",
     "jquery": "^3.6.0",
     "popper.js": "^1.16.1",
-=======
-  "name": "shopify_app",
-  "private": true,
-  "dependencies": {
-    "@rails/actioncable": "^6.0.0-alpha",
-    "@rails/ujs": "^6.0.0-alpha",
-    "@rails/webpacker": "4.3.0",
-    "bootstrap": "^4.6.0",
->>>>>>> b5c6566438179161fc249da7caacb6f67b5f4729
     "turbolinks": "^5.2.0"
   },
   "version": "0.1.0",

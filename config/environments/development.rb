@@ -28,12 +28,9 @@ Rails.application.configure do
     config.cache_store = :null_store
   end
 
-<<<<<<< HEAD
   # Store uploaded files on the local file system (see config/storage.yml for options).
   config.active_storage.service = :cloudinary
 
-=======
->>>>>>> b5c6566438179161fc249da7caacb6f67b5f4729
   # Don't care if the mailer can't send.
   config.action_mailer.raise_delivery_errors = false
 
