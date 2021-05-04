@@ -35,12 +35,9 @@ Rails.application.configure do
   # config.action_dispatch.x_sendfile_header = 'X-Sendfile' # for Apache
   # config.action_dispatch.x_sendfile_header = 'X-Accel-Redirect' # for NGINX
 
-<<<<<<< HEAD
   # Store uploaded files on the local file system (see config/storage.yml for options).
   config.active_storage.service = :cloudinary
 
-=======
->>>>>>> b5c6566438179161fc249da7caacb6f67b5f4729
   # Mount Action Cable outside main process or domain.
   # config.action_cable.mount_path = nil
   # config.action_cable.url = 'wss://example.com/cable'
@@ -61,11 +58,7 @@ Rails.application.configure do
 
   # Use a real queuing backend for Active Job (and separate queues per environment).
   # config.active_job.queue_adapter     = :resque
-<<<<<<< HEAD
   # config.active_job.queue_name_prefix = "image_repository_production"
-=======
-  # config.active_job.queue_name_prefix = "shopify_app_production"
->>>>>>> b5c6566438179161fc249da7caacb6f67b5f4729
 
   config.action_mailer.perform_caching = false
 

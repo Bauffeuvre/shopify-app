@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <%= simple_form_for(@image) do |f| %>
   <%= f.label :title, "Title of the image" %>
   <%= f.text_field :title %>
@@ -9,18 +8,5 @@
   <%= f.label :path, "which url?" %>
   <%= f.text_field :path %>
   <%= f.input :photo, as: :file %>
-=======
-<%= form_for(@image) do |f| %>
-  <%= f.label :name, "Title of the image" %>
-  <%= f.text_field :name %>
-  <%= f.label :rating, "How many stars" %>
-  <%= f.number_field :rating %>
-  <%= f.label :category, "Category of the image" %>
-  <%= f.text_field :category %>
-  <%= f.label :legend, "What legend ?" %>
-  <%= f.text_field :legend %>
-  <%= f.label :img_link, "which url?" %>
-  <%= f.text_field :img_link %>
->>>>>>> b5c6566438179161fc249da7caacb6f67b5f4729
   <%= f.submit %>
 <% end %>

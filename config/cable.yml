@@ -7,8 +7,4 @@ test:
 production:
   adapter: redis
   url: <%= ENV.fetch("REDIS_URL") { "redis://localhost:6379/1" } %>
-<<<<<<< HEAD
   channel_prefix: image_repository_production
-=======
-  channel_prefix: shopify_app_production
->>>>>>> b5c6566438179161fc249da7caacb6f67b5f4729
