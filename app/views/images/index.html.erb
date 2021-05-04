@@ -1,18 +1,26 @@
 <h1>Images</h1>
 
+<div class="btn btn-primary">
 <%= link_to "Add an image" , new_image_path %>
+</div>
 
-<% @images.each do |image| %>
-  <ul>
-    <li> <%= image.id %> </li>
-    <% unless image.path == ""  %>
-    <img src=" <%= image.path %>" alt="test" width="400px">
-    <% else %>
-    <%= cl_image_tag @image.photo.key, height: 300, width: 400, crop: :fill %>
+<div class="container">
+  <div class="row">
+    <% @images.each do |image| %>
+      <div class="card col-4">
+        <% unless image.path == ""  %>
+        <img  class="card-img-top" src=" <%= image.path %>" alt="<%= image.path%>">
+        <% else %>
+        <%= cl_image_tag image.photo.key%>
+        <% end %>
+        <div class="card-body">
+          <h5 class="card-title"> <%= image.title %> </h5>
+          <p class="card-text"> <%= image.legend %> </p>
+          <p><%= link_to "Link to this image", image_path(image)  %></p>
+          <p><%= link_to "Edit this image", edit_image_path(image)  %></p>
+          <p><%= link_to "Delete this image", image_path(image), method: :delete  %></p>
+        </div>
+      </div>
     <% end %>
-    <p><%= link_to "Link to this image", image_path(image)  %></p>
-    <p><%= link_to "Edit this image", edit_image_path(image)  %></p>
-    <p><%= link_to "Delete this image", image_path(image), method: :delete  %></p>
-
-  </ul>
-<% end %>
+  </div>
+</div>
