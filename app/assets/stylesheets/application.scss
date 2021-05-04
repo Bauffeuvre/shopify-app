@@ -1,5 +1,9 @@
 @import "bootstrap/scss/bootstrap";
 
+.navbar {
+  margin-bottom: 10px;
+} 
+
 .cards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
