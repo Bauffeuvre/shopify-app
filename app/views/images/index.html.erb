@@ -5,7 +5,7 @@
         <% unless image.path == ""  %>
         <img  class="card-img-top" src=" <%= image.path %>" alt="<%= image.path%>">
         <% else %>
-        <%= cl_image_tag image.photo.key %>
+        <%= cl_image_tag image.photo.key, crop: :fill %>
         <% end %>
         <div class="card-body">
           <h5 class="card-title"> <%= image.title %> </h5>
