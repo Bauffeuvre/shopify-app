@@ -1,6 +1,6 @@
 class ImagesController < ApplicationController
 #  before_action :image_params
-
+skip_before_action :authenticate_user!, only: :index
 
   def index
    @images = Image.all
@@ -12,7 +12,6 @@ end
 
 def new
   @image = Image.new
-  # redirect_to images_path
 end
 
 def create
