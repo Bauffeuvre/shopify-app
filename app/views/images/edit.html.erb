@@ -1,12 +1,26 @@
-<%= simple_form_for(@image) do |f| %>
-  <%= f.label :title, "Title of the image" %>
-  <%= f.text_field :title %>
-  <%= f.label :rating, "How many stars" %>
-  <%= f.number_field :rating %>
-  <%= f.label :legend, "What legend ?" %>
-  <%= f.text_field :legend %>
-  <%= f.label :path, "which url?" %>
-  <%= f.text_field :path %>
-  <%= f.input :photo, as: :file %>
-  <%= f.submit %>
-<% end %>
+<div class="container">
+  <div class="form">
+    <%= simple_form_for(@image) do |f| %>
+      <div class="form-group">
+        <%= f.label :title, "Title of the image"%>
+        <%= f.text_field :title, :class => 'form-control'  %>
+      </div>
+      <div class="form-group">
+        <%= f.label :rating, "How many stars?" %>
+        <%= f.number_field :rating, :class => 'form-control' %>
+      </div>
+      <div class="form-group">
+        <%= f.label :legend, "What legend ?" %>
+        <%= f.text_field :legend, :class => 'form-control' %>
+      </div>
+      <div class="form-group">
+        <%= f.label :path, "which url ?" %>
+        <%= f.text_field :path, :class => 'form-control' %>
+      </div>
+      <div class="form-group">
+        <%= f.input :photo, as: :file %>
+      </div>
+        <%= f.submit 'Send the image', :class => 'btn btn-primary' %>
+      <% end %>
+    </div>
+</div>

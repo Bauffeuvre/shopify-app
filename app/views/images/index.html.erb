@@ -1,5 +1,8 @@
 <div class="container">
   <div class="row">
+  <p><% unless user_signed_in?  %> </p>
+    <h3 id="welcome-message">Welcome to this Rails application. Please log-in to access the options</p>
+  <% else %>
     <% if @images.nil? || @images == [] %>
     <div >
     <p class="centered-text"> There are no Images in this repo </p>
@@ -24,6 +27,6 @@
         </div>
       <% end %>
     <% end %>
+  <% end %>
   </div>
 </div>
-  

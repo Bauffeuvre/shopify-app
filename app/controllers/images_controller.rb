@@ -19,7 +19,6 @@ def create
   redirect_to images_path
 end
 
-
 def edit
   @image = Image.find(params[:id])
 end  
@@ -37,7 +36,6 @@ def destroy
   redirect_to images_path
   
 end
-
 
 private
 
