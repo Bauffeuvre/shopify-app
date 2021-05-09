@@ -3,12 +3,21 @@
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
 .centered-text {
-    left: 0;
-    line-height: 200px;
-    margin-top: -100px;
-    position: absolute;
-    text-align: center;
-    top: 50%;
-    width: 100%;
-    font-size: 30px;
+  left: 0;
+  line-height: 200px;
+  margin-top: -100px;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  width: 100%;
+  font-size: 30px;
+}
+
+.card {
+  margin-top: 12px;
+//   width: auto;
+}
+
+.card-img-top {
+    margin-top: 10px;
 }
