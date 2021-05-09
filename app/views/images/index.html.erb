@@ -1,8 +1,9 @@
 <div class="container">
-  <div class="row">
-  <p><% unless user_signed_in?  %> </p>
+  <% unless user_signed_in?  %>
     <h3 id="welcome-message">Welcome to this Rails application. Please log-in to access the options</p>
+    <%= link_to 'Login', new_user_session_path, :class => 'btn btn-primary' %>
   <% else %>
+  <div class="row">
     <% if @images.nil? || @images == [] %>
     <div >
     <p class="centered-text"> There are no Images in this repo </p>
