@@ -1,24 +1,32 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Ruby Version :
+2.6.6
+Rails Version :
+6.0.3
+Database :
+PostgreSQL 
 
-Things you may want to cover:
+__Preambule__
 
-* Ruby version
+Hi, I am Baptiste, actually in reconversion from engineering to web Development. As you may have notice (and if not, for sure you will), I am still learning.
+I didn`t finished the bootcamp yet so I had to review the lectures in advance in order to submit this challenge in time (and this explain some gaps in the code, specifically in the TDD part).
 
-* System dependencies
+I still had a lot of fun building this small app, and I hope you will enjoy the same as I had to make it !
 
-* Configuration
+Baptiste
 
-* Database creation
 
-* Database initialization
+__Features :__
 
-* How to run the test suite
+The idea behind this app is to display images stocked from an Url or a FTP server (I used cloudinary because it is free for this usage, is really well implemented with rails and has an image AI program that helps to render pictures of different sizes).
 
-* Services (job queues, cache servers, search engines, etc.)
+You have to log in if you want to post an image, edit, and see the images already in the Database. I did put some Tests but as you can see they fail : this is a part I couldnt cover with the amount of time left. 
 
-* Deployment instructions
+__Gems used__ :
 
-* ...
+simple_form to improve forms
+Devise as an authentificator
+Cloudinary to store images
+capybara and selenium for system tests
+
