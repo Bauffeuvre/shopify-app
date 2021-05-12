@@ -1,4 +1,9 @@
 <h1>Image</h1>
-<img src=" <%= @image.path %>" alt="test" width="1000">
+
+<% if @image.path == "" %>
+  <%= cl_image_tag @image.photo.key, style: "width= 400px" %>
+<% else %>
+  <img src=" <%= @image.path %>" alt="<% @image.title %>" width="400px">
+<% end %>
 <p> <%= @image.title %> </p>
 <%= link_to "Back to the list", images_path %>
