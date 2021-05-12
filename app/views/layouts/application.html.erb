@@ -4,7 +4,7 @@
     <title>ImageRepository</title>
     <link rel="stylesheet" href="../../assets/stylesheets/application.scss">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -14,47 +14,46 @@
   <body>
     <nav class="navbar navbar-expand navbar-dark bg-dark">
       <div class="d-flex justify-content-between"">
-      <a class="navbar-brand" href="<%= images_path %>">Images Repository</a>
-      </button>
+        <a class="navbar-brand" href="<%= images_path %>">Images Repository</a>
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
-       <ul class="navbar-nav">
+        <ul class="navbar-nav">
           <li class="nav-item active">
-          <a class="nav-link" href="<%= images_path %>">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="<%= images_path %>">Home <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-          <a class="nav-link" href="<%= new_image_path %>"> New Image</a> 
+            <a class="nav-link" href="<%= new_image_path %>"> New Image</a> 
           </li>
         </ul>
       </div>
-      <div class="collapse navbar-collapse" id="navbarNavDropdown  right">
-       <ul class="navbar-nav">
-       <% if user_signed_in? %>
-       <li class="nav-item">
-        <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "nav-link" %>
-       </li>
-      <% else %>
-      <li class="nav-item">
-        <%= link_to "Login", new_user_session_path, class: "nav-link" %>
-      </li>
-      <% end %>
+      <div>
+        <ul class="navbar-nav">
+          <% if user_signed_in? %>
+            <li class="nav-item">
+            <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "nav-link" %>
+            </li>
+          <% else %>
+            <li class="nav-item">
+            <%= link_to "Login", new_user_session_path, class: "nav-link" %>
+            </li>
+          <% end %>
+        </ul>
       </div>
     </nav>
-    </ul>
     </div>
+
     <%= yield %>
 
-
-<div class="footer">
-  <div class="footer-links">
-    <a href="https://www.linkedin.com/in/baptisteauffeuvre/"><i class="fab fa-linkedin"></i></a>
-  </div>
-  <div class="footer-copyright">
-    This website is made with ❤ in MTL
-  </div>
-    <div class="footer-links">
-    <a href="https://github.com/Bauffeuvre/"><i class="fab fa-github"></i></a>
-  </div>
-</div>
+    <div class="footer">
+      <div class="footer-links">
+        <a href="https://www.linkedin.com/in/baptisteauffeuvre/"><i class="fab fa-linkedin"></i></a>
+      </div>
+      <div class="footer-copyright">
+        This website is made with ❤ in MTL
+      </div>
+        <div class="footer-links">
+        <a href="https://github.com/Bauffeuvre/"><i class="fab fa-github"></i></a>
+      </div>
+    </div>
 
   </body>
 </html>

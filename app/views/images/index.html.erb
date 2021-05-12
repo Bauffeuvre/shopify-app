@@ -19,10 +19,23 @@
           <div class="card-body">
             <h5 class="card-title"> <%= image.title %> </h5>
             <p class="card-text"> <%= image.legend %> </p>
-            <div class="d-flex justify-content-around">
-            <p><%= link_to "More info", image_path(image)  %></p>
-            <p><%= link_to "Edit", edit_image_path(image)  %></p>
-            <p><%= link_to "Delete", image_path(image), method: :delete  %></p>
+
+            <div class="options-task">
+            <div class="option">
+              <%= link_to image_path(image) do %>
+                <%= fa_icon "eye" %>
+              <% end %>
+            </div>
+            <div class="option">
+              <%= link_to  image_path(image), method: :delete  do %>
+                <%= fa_icon "edit" %>
+              <% end %>
+            </div>
+            <div class="option">
+              <%= link_to image_path(image), method: :delete do %>
+                <%= fa_icon "trash" %>
+              <% end %>
+
             </div>
           </div>
         </div>
