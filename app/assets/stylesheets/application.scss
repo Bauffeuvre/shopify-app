@@ -88,3 +88,18 @@
   margin-top: 12px;
   // width: 800px !important;
 }
+
+// Media queries
+
+@media (min-width: 1200px) { 
+    .row {
+    display: flex;
+    width: 1000px;
+    flex-wrap: wrap;
+    margin: 10px;
+    flex-direction: row;
+    align-content: flex-start;
+    justify-content: space-around;
+  }
+
+}
