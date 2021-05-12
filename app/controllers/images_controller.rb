@@ -1,5 +1,5 @@
 class ImagesController < ApplicationController
-  before_action :image_params, only: [:show, :update, :destroy, :edit]
+  before_action :set_image, only: [:show, :update, :destroy, :edit]
   skip_before_action :authenticate_user!, only: :index
 
   def index
@@ -39,7 +39,4 @@ class ImagesController < ApplicationController
   def image_params
     params.require(:image).permit(:title, :rating, :legend, :path, :photo)
   end
-
-
-
 end
