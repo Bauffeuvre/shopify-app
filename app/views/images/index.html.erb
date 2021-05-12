@@ -3,44 +3,43 @@
     <h3 id="welcome-message">Welcome to this Rails application. Please log-in to access the options</p>
     <%= link_to 'Login', new_user_session_path, :class => 'btn btn-primary' %>
   <% else %>
-  <div class="row">
-    <% if @images.nil? || @images == [] %>
-    <div >
-    <p class="centered-text"> There are no Images in this repo </p>
-    </div>
-    <% else %>
-      <% @images.each do |image| %>
-        <div class="card col-12 col-sm-6 col-md-4 col-lg-3" id="card-display">
-          <% unless image.path == ""  %>
-          <img  class="card-img-top" src=" <%= image.path %>" alt="<%= image.path%>">
-          <% else %>
-          <%= cl_image_tag image.photo.key, class: "card-img-top", style: "width= 400px" %>
-          <% end %>
-          <div class="card-body">
-            <h5 class="card-title"> <%= image.title %> </h5>
-            <p class="card-text"> <%= image.legend %> </p>
+    <div class="row">
+      <% if @images.nil? || @images == [] %>
+        <div >
+          <p class="centered-text"> There are no Images in this repo </p>
+        </div>
+      <% else %>
+        <% @images.each do |image| %>
+          <div class="card col-12 col-sm-6 col-md-4 col-lg-3" id="card-display">
+            <% unless image.path == ""  %>
+              <img  class="card-img-top" src=" <%= image.path %>" alt="<%= image.path%>">
+            <% else %>
+              <%= cl_image_tag image.photo.key, class: "card-img-top", style: "width= 400px" %>
+            <% end %>
+            <div class="card-body">
+              <h5 class="card-title"> <%= image.title %> </h5>
+              <p class="card-text"> <%= image.legend %> </p>
+                <div class="options-task">
+                <div class="option">
+                  <%= link_to image_path(image) do %>
+                    <%= fa_icon "eye" %>
+                  <% end %>
+                </div>
+                <div class="option">
+                  <%= link_to  image_path(image), method: :delete  do %>
+                    <%= fa_icon "edit" %>
+                  <% end %>
+                </div>
+                <div class="option">
+                  <%= link_to image_path(image), method: :delete do %>
+                    <%= fa_icon "trash" %>
+                  <% end %>
 
-            <div class="options-task">
-            <div class="option">
-              <%= link_to image_path(image) do %>
-                <%= fa_icon "eye" %>
-              <% end %>
-            </div>
-            <div class="option">
-              <%= link_to  image_path(image), method: :delete  do %>
-                <%= fa_icon "edit" %>
-              <% end %>
-            </div>
-            <div class="option">
-              <%= link_to image_path(image), method: :delete do %>
-                <%= fa_icon "trash" %>
-              <% end %>
-
+                </div>
             </div>
           </div>
         </div>
       <% end %>
     <% end %>
   <% end %>
-  </div>
 </div>
