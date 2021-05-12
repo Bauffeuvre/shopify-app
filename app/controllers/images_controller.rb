@@ -13,10 +13,16 @@ class ImagesController < ApplicationController
   end
 
   def create
-    Image.create(image_params)
-    redirect_to images_path
+    @image = Image.new(image_params)
+    if @image.save
+      flash[:success] = "Image successfully created"
+      redirect_to @image
+    else
+      flash[:error] = "Something went wrong"
+      render 'new'
+    end
   end
-
+  
   def edit; end  
 
   def update
@@ -25,8 +31,13 @@ class ImagesController < ApplicationController
   end
 
   def destroy
-    @image.destroy
-    redirect_to images_path
+    if @image.destroy
+      flash[:success] = 'Object was successfully deleted.'
+      redirect_to images_path
+    else
+      flash[:error] = 'Something went wrong'
+      redirect_to images_path
+    end
   end
   
   private
