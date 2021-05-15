@@ -13,48 +13,51 @@
   </head>
 
   <body>
-    <nav class="navbar navbar-expand navbar-dark bg-dark">
-      <div class="d-flex justify-content-between"">
-        <a class="navbar-brand" href="<%= images_path %>">Images Repository</a>
-      <div class="collapse navbar-collapse" id="navbarNavDropdown">
-        <ul class="navbar-nav">
+    <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+      <%= link_to "Images", class: "navbar-brand" do %>
+        <%= image_tag "https://cdn.iconscout.com/icon/free/png-256/gallery-187-902099.png" %>
+      <% end %>
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="<%= images_path %>">Home <span class="sr-only">(current)</span></a>
+            <%= link_to "Images", images_path , class: "nav-link" %>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="<%= new_image_path %>"> New Image</a> 
+            <%= link_to "Add an image", new_image_path, class: "nav-link" %>
           </li>
-        </ul>
-      </div>
-      <div>
-        <ul class="navbar-nav">
           <% if user_signed_in? %>
-            <li class="nav-item">
-            <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "nav-link" %>
-            </li>
-          <% else %>
-            <li class="nav-item">
-            <%= link_to "Login", new_user_session_path, class: "nav-link" %>
-            </li>
-          <% end %>
+              <li class="nav-item">
+              <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "nav-link" %>
+              </li>
+            <% else %>
+              <li class="nav-item">
+              <%= link_to "Login", new_user_session_path, class: "nav-link" %>
+              </li>
+            <% end %>
         </ul>
       </div>
-    </nav>
     </div>
 
     <%= yield %>
 
-    <div class="footer">
-      <div class="footer-links">
-        <a href="https://www.linkedin.com/in/baptisteauffeuvre/"><i class="fab fa-linkedin"></i></a>
-      </div>
-      <div class="footer-copyright">
-        This website is made with ❤ in MTL
-      </div>
-        <div class="footer-links">
-        <a href="https://github.com/Bauffeuvre/"><i class="fab fa-github"></i></a>
-      </div>
+
+  <footer id="footer">
+    <div class="footer-links">
+      <a href="https://www.linkedin.com/in/baptisteauffeuvre/"><i class="fab fa-linkedin"></i></a>
     </div>
+    <div class="footer-copyright">
+      This website is made with ❤ in MTL
+    </div>
+      <div class="footer-links">
+      <a href="https://github.com/Bauffeuvre/"><i class="fab fa-github"></i></a>
+    </div>
+  </footer>
 
   </body>
 </html>
