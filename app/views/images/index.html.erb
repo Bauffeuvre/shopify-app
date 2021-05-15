@@ -55,7 +55,7 @@
     <h3 id="welcome-message">Welcome to this Rails application. Please log-in to access the options</p>
   <% else %>
     <h2>Your images :</h2>
-      <div class="row">
+      <div class="row" style="min-height: 300px">
         <% if @images.nil? || @images == [] %>
           <div>
             <p class="centered-text"> There are no Images in this repository, add the first one ! </p>
