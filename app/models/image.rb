@@ -1,5 +1,6 @@
 class Image < ApplicationRecord
   has_one_attached :photo
+  has_many :reviews
 
   validates :title, presence: true
   validates :legend, presence: true
