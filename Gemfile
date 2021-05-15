@@ -35,6 +35,11 @@ gem 'devise'
 gem 'cloudinary', '~> 1.16.0'
 # Fontawesome helper
 gem "font-awesome-rails"
+# Font awesome saas
+gem 'font-awesome-sass', '~> 5.12.0'
+#Auto Prefixer gem for CSS Styling
+gem 'autoprefixer-rails', '10.2.5'
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
