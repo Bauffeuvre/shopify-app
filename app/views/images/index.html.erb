@@ -50,49 +50,37 @@
   </div>
 </div>
 
-<div class="container">
+<div class="container my-2">
   <% unless user_signed_in?  %>
     <h3 id="welcome-message">Welcome to this Rails application. Please log-in to access the options</p>
-    <%= link_to 'Login', new_user_session_path, :class => 'btn btn-primary' %>
   <% else %>
-    <div class="row">
-      <% if @images.nil? || @images == [] %>
-        <div >
-          <p class="centered-text"> There are no Images in this repo </p>
-        </div>
-      <% else %>
-        <% @images.each do |image| %>
-          <div class="card col-12 col-sm-6 col-md-4 col-lg-3" id="card-display">
-            <% unless image.path == ""  %>
-              <img  class="card-img-top" src=" <%= image.path %>" alt="<%= image.path%>">
-            <% else %>
-              <%= cl_image_tag image.photo.key, class: "card-img-top", style: "width= 400px" %>
-            <% end %>
-            <div class="card-body">
-              <h5 class="card-title"> <%= image.title %> </h5>
-              <p class="card-text"> <%= image.legend %> </p>
-                <div class="options-task">
-                <div class="option">
-                  <%= link_to image_path(image) do %>
-                    <%= fa_icon "eye" %>
-                  <% end %>
-                </div>
-                <div class="option">
-                  <%= link_to  edit_image_path(image) do %>
-                    <%= fa_icon "edit" %>
-                  <% end %>
-                </div>
-                <div class="option">
-                  <%= link_to image_path(image), method: :delete do %>
-                    <%= fa_icon "trash" %>
-                  <% end %>
-                </div>
-            </div>
+    <h2>Your images :</h2>
+      <div class="row">
+        <% if @images.nil? || @images == [] %>
+          <div>
+            <p class="centered-text"> There are no Images in this repository, add the first one ! </p>
           </div>
-        </div>
-      <% end %>
-    <% end %>
+        <% else %>
+          <% @images.each do |image| %>
+            <div class="card col-md-4 col-sm-6 col-12" style="width: 18rem;">
+              <% if image.path == "" || image.path == nil %>
+                <a href="<%= image_path(image) %>" class="card-image" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path image.photo.key %>')">
+                </a>
+                <% else %>
+                <a href="<%= image_path(image) %>" class="card-image" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= image.path %>')">
+                </a>
+              <% end %>
+              <div class="card-body">
+                <h5 class="card-title"><%= image.title  %></h5>
+                <p class="card-text"><%= image.legend  %></p>
+                <%= link_to "See the image", image_path(image)  %>
+              </div>
+             <p class="card-rating"> <%= image.rating %> / 5 </p>
+            </div>
+          <% end %>
+        <% end %>
+      </div>
   <% end %>
-  </div>
 </div>
+
 

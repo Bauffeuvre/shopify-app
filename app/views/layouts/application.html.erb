@@ -14,7 +14,7 @@
 
   <body>
     <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-      <%= link_to "Images", class: "navbar-brand" do %>
+      <%= link_to :root, class: "navbar-brand" do %>
         <%= image_tag "https://cdn.iconscout.com/icon/free/png-256/gallery-187-902099.png" %>
       <% end %>
 
@@ -47,7 +47,7 @@
     <%= yield %>
 
 
-  <footer id="footer">
+  <footer class="footer">
     <div class="footer-links">
       <a href="https://www.linkedin.com/in/baptisteauffeuvre/"><i class="fab fa-linkedin"></i></a>
     </div>
