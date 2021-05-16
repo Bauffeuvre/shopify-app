@@ -30,7 +30,7 @@
                 <%= f.input :rating %>
               </div>
               <div class="form-group">
-                <%= f.input :path %>
+                <%= f.input :url %>
               </div>
               <div class="form-group">
                 <%= f.input :legend, :as => :text %>
@@ -63,11 +63,11 @@
         <% else %>
           <% @images.each do |image| %>
             <div class="card col-md-4 col-sm-6 col-12" style="width: 18rem;">
-              <% if image.path == "" || image.path == nil %>
+              <% if image.url == "" || image.url == nil %>
                 <a href="<%= image_path(image) %>" class="card-image" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path image.photo.key %>')">
                 </a>
                 <% else %>
-                <a href="<%= image_path(image) %>" class="card-image" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= image.path %>')">
+                <a href="<%= image_path(image) %>" class="card-image" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= image.url %>')">
                 </a>
               <% end %>
               <div class="card-body">

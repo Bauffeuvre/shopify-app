@@ -49,6 +49,6 @@ class ImagesController < ApplicationController
   
   # Strong parameters
   def image_params
-    params.require(:image).permit(:title, :rating, :legend, :path, :photo)
+    params.require(:image).permit(:title, :rating, :legend, :url, :photo)
   end
 end
