@@ -9,7 +9,7 @@ PostgreSQL
 
 __Preambule__
 
-Hi, I am Baptiste, actually in reconversion from engineering to web Development. As you may have notice (and if not, for sure you will), I am still learning.
+Hi, I am Baptiste, actually in a career change from engineering to web Development. As you may have notice (and if not, for sure you will), I am still learning.
 I didn`t finished the bootcamp yet so I had to review the lectures in advance in order to submit this challenge in time (and this explain some gaps in the code, specifically in the TDD part).
 
 I still had a lot of fun building this small app, and I hope you will enjoy the same as I had to make it !
