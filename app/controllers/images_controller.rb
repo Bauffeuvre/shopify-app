@@ -7,7 +7,9 @@ class ImagesController < ApplicationController
     new
   end
     
-  def show; end
+  def show
+    @review = Review.new
+  end
 
   def new
     @image = Image.new
